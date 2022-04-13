@@ -331,6 +331,11 @@ public class Main {
         System.out.print("Введите сумму вклада под 7% в месяц: ");
         if (sc.hasNextFloat()){
             float money = sc.nextFloat();
+            while (money <= 0){
+                System.out.println("Пожалуй не стоило прогуливать школу, сумма не может быть отрицательной");
+                System.out.print("Введите сумму вклада под 7% в месяц: ");
+                money = sc.nextFloat();
+            }
             System.out.println("На сколько месяцев вы хотите сделать вклад?");
             if (sc.hasNextInt()){
                 int mounth = sc.nextInt();
